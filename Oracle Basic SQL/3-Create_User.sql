@@ -12,6 +12,8 @@ the other way is using sql developer, you can use sql developer to directly conn
 Here,you will put user_name, user_password and tablespace_name 
 */
 
+/* set the pluggable session to create common user with command below before creatin users. Ref: https://stackoverflow.com/questions/22886791/invalid-common-user-or-role-name */
+alter session set "_ORACLE_SCRIPT"=true;
 
 CREATE USER user_name 
 IDENTIFIED BY user_password
